@@ -43,11 +43,11 @@ public class ItemDB {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ItemDB dao = new ItemDB();
+/*		ItemDB dao = new ItemDB();
 		Item dto = new Item();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		String a = sdf.format(dao.when(dto).getJdday());
-		System.out.println(a);
+		System.out.println(a);*/
 	}
 
 }
