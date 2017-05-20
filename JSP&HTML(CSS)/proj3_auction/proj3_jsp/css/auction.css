@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+*{
+	border: 1px dotted red;
+	
+}
+
+#allContainer{
+	width:1500px;
+	height:900px;
+	position:absolute;
+	top:40px;
+	left:calc( ( 100% - 1500px ) / 2);
+	
+}
+
+#leftContainer{
+	
+}
+
+#rightContainer{
+	
+}
+
+
+
