@@ -27,10 +27,10 @@ request.setCharacterEncoding("UTF-8");
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script src="<%=path%>/js/jquery-3.2.1.js"></script>
+<script src="http:/code.jquery.com/jquery-3.2.1.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		count();
+		setTime();
 	});
 
 //	날짜 설정 함수
@@ -49,21 +49,17 @@ request.setCharacterEncoding("UTF-8");
 		var minutes = parseInt((gap%(60*60))/60);
 //		초수. 
 		var seconds = gap%60;
-//		만약 마감시간과 현재시간 차이가 0보다 크면 계속 화면단에 시간 표시		
-		if(gap>0){
-			$("h1").html(days+"일 "+hours+"시간 "+minutes+"분 "+seconds+"초 ");
-//		아니면 경매종료 표시 및 alert창			
-		}else{
+//		만약 마감시간과 현재시간 차이가 0보다 크면 계속 화면단에 시간 표시
+		$("h1").html(days+"일 "+hours+"시간 "+minutes+"분 "+seconds+"초 ");
+//		아니면 경매종료 표시 및 alert창	
+		if(gap<=0){
 			$("h1").html("경매종료");
 			alert("경매끝!");
+			clearInterval(count);
 		}
 	}
 //	setInterval 함수로 1초마다 계속 카운트다운 refresh
-	function count(){
-		setInterval(function(){
-			setTime();
-		},1000);
-	}
+	var count = setInterval(setTime,1000);
 </script>
 <style type="text/css">
 

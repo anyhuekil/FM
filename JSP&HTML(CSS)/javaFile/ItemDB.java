@@ -1,6 +1,6 @@
 package z01_database;
 
-import java.sql.Connection;
+import java.sql.Connection;   
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -38,16 +38,24 @@ public class ItemDB {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally{
+			try {
+				if(rs!=null) rs.close();
+				if(pstmt!=null) pstmt.close();
+				if(con!=null) con.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
 		}
 		return i;
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-/*		ItemDB dao = new ItemDB();
-		Item dto = new Item();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		String a = sdf.format(dao.when(dto).getJdday());
-		System.out.println(a);*/
+//		ItemDB dao = new ItemDB();
+//		Item dto = new Item();
+//		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+//		String a = sdf.format(dao.when(dto).getJdday());  // 아 이게 왜 ㅜㅜ...?;;;
+//		System.out.println(a);
 	}
 
 }
