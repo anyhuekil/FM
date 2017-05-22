@@ -22,8 +22,8 @@
 	h1{text-align:center; font-size:40px; color:blue; font-family: "Comic Sans MS"}
 	h3{margin-left:30px; line-height:60px; font-family: "Comic Sans MS"}
 	p{margin-left:30px; line-height:60px; font-family: "Comic Sans MS"}
-	div{ border:1px dotted black; display:inline-block;}
-	#main_container{display:block; width:1200px; height:950px;}
+	div{border:1px dotted black; display:inline-block;}
+	#main_container{display:block; width:1200px; height:100vh;}
 	#item_picture{ margin:2%; width:45%; height:50%; float:left; }
 	#item_info{margin:2%; width:45%; height:50%; float:left;}
 	#countdown_info{margin:2%; width:45%; height:15%; float:left;}

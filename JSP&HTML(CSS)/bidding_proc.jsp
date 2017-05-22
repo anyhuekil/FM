@@ -1,8 +1,8 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-    import = "jspexp.proj3_java.AuctionBidDTO"
-    import = "jspexp.proj3_java.AuctionBidDAO"%>
+    import = "z02_vo.AuctionBidDTO"
+    import = "z01_database.AuctionBidDAO" %>
 <% request.setCharacterEncoding("UTF-8"); 
 	// 모든 프로세스 처리는 이 페이지에 모을생각.
 
