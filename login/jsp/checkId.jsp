@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-    import="z02_vo.Member"
-    import="z01_database.Z01_MemberDB"    
+    import="login_jh.Member"
+    import="login_jh.Z01_MemberDB"    
     %>
 <%request.setCharacterEncoding("UTF-8"); %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
