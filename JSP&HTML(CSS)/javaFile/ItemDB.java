@@ -1,6 +1,6 @@
 package z01_database;
 
-import java.sql.Connection;   
+import java.sql.Connection;    
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -54,7 +54,7 @@ public class ItemDB {
 //		ItemDB dao = new ItemDB();
 //		Item dto = new Item();
 //		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-//		String a = sdf.format(dao.when(dto).getJdday());  // 아 이게 왜 ㅜㅜ...?;;;
+//		String a = sdf.format(dao.when(dto).getJdday());  
 //		System.out.println(a);
 	}
 
