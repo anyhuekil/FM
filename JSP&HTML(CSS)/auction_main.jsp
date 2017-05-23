@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
+    import = "java.util.*, java.text.*"
     import = "z02_vo.Item, z01_database.ItemDB"
     import = "z02_vo.AuctionBidDTO"
     import = "z01_database.AuctionBidDAO"
@@ -15,7 +16,36 @@
 <title>Insert title here</title>
 <script src = "http://code.jquery.com/jquery-3.2.1.js"></script>
 <script type="text/javascript">
+<%
+// dao, dto 세팅 
+  ItemDB dao = new ItemDB();
+  Item dto = new Item();
+//	날짜 변환. sql에서 rs.getDate로 테이블의 마감시간값을 따오면 yyyy/MM/dd로만 표시되서 
+//	SimpleDateFormat으로 날짜형식을 변형함.
+  SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+  String day = sdf.format(dao.when(dto).getJdday());
+%>    
+
+var count = setInterval(setTime,1000);
+function setTime(){
+	var sysday = new Date();
+	var dday = new Date("<%=day%>");
+	var gap = parseInt((dday.getTime()-sysday.getTime())/1000);
+	var days = parseInt(gap/(60*60*24));
+	var hours = parseInt((gap%(60*60*24))/(60*60));
+	var minutes = parseInt((gap%(60*60))/60);
+	var seconds = gap%60;
+	$("h1").html(days+"일 "+hours+"시간 "+minutes+"분 "+seconds+"초 ");
+	if(gap<=0){
+		$("h1").html("경매종료");
+		alert("경매끝!");
+		clearInterval(count);
+	}
+}
+
 	$(document).ready(function(){
+		
+		$("#showTime").text(setTime());		
 		$("input[name = curr]").attr("disabled", true);		
 		<%
 		AuctionBidDTO bidder = new AuctionBidDTO();
@@ -76,7 +106,7 @@
 		</div>
 		<div id="countdown_info">
 			<h1>Time Left</h1>
-			<p>Countdown</p>
+			<p id = showTime > </p>
 		</div>
 		<div id="bidding_info">
 			<form method = post action = bidding_proc.jsp >
