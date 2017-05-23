@@ -1,6 +1,6 @@
 package jspexp.z01_database;
 
-import java.sql.*;
+import java.sql.*; 
 
 import jspexp.z02_vo.Auction_Bid;
 
@@ -17,7 +17,7 @@ public class Auction_BidDao {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		String conInfo="jdbc:oracle:thin:@192.168.0.110:1522:orcl";
 		con = DriverManager.getConnection(conInfo,"cto","qqqq");
-		System.out.println("접속문제");
+		System.out.println("connection complete");
 	}
 	
 	public Auction_Bid getAuction_Bid(Auction_Bid sch){
