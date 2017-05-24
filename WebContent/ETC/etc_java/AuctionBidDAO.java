@@ -1,10 +1,12 @@
-package jspexp.proj3_java;
+package z01_database;
 
-import java.sql.Connection; 
+import java.sql.Connection;  
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import z02_vo.AuctionBidDTO;
 
 public class AuctionBidDAO {
 	private Connection con;
@@ -86,17 +88,15 @@ public class AuctionBidDAO {
 	
 	
 public static void main(String[] args){
-	AuctionBidDAO db = new AuctionBidDAO();
-	AuctionBidDTO sch = new AuctionBidDTO();
-	sch.setCurrentBid(5000.0);
-	sch.setAuctionID(2);
-	try {
-		db.raisePrice(sch);
-		//System.out.println(pd.getAuctionID());
-		//System.out.println(pd.getCurrentBid());
-		db.getPrice(sch).getCurrentBid();
-	} catch (Exception e) {
-		e.printStackTrace();
-	}
+//	AuctionBidDAO db = new AuctionBidDAO();
+//	AuctionBidDTO sch = new AuctionBidDTO();
+//	sch.setCurrentBid(5000.0);
+//	sch.setAuctionID(2);
+//	try {
+//		db.raisePrice(sch);
+//		System.out.println(db.getPrice(sch).getCurrentBid());
+//	} catch (Exception e) {
+//		e.printStackTrace();
+//	}
 }
 }

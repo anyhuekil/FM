@@ -18,7 +18,7 @@ request.setCharacterEncoding("UTF-8");
 //	날짜 변환. sql에서 rs.getDate로 테이블의 마감시간값을 따오면 yyyy/MM/dd로만 표시되서 
 //	SimpleDateFormat으로 날짜형식을 변형함.
 //	Timestamp api를 사용하면 따올 수 있기는 한데 뭔가 이상해서 포기함.
-  SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+  SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");   //####
   String day = sdf.format(dao.when(dto).getJdday());
   
 %>    
@@ -30,7 +30,7 @@ request.setCharacterEncoding("UTF-8");
 <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		setTime();
+		setTime();  //####
 	});
 
 //	날짜 설정 함수

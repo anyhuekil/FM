@@ -13,13 +13,8 @@ public class Auction_BidDao {
 	private void setConn() throws ClassNotFoundException, SQLException {
 
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-<<<<<<< HEAD
 		String conInfo = "jdbc:oracle:thin:@192.168.0.110:1522:orcl";
 		con = DriverManager.getConnection(conInfo, "cto", "qqqq");
-=======
-		String conInfo="jdbc:oracle:thin:@192.168.0.110:1522:orcl";
-		con = DriverManager.getConnection(conInfo,"cto","qqqq");
->>>>>>> f557a3b939d2d3597a43dcda5bf75dfd48d9db2c
 		System.out.println("접속문제");
 	}
 
@@ -70,7 +65,6 @@ public class Auction_BidDao {
 		}
 		return aub;
 	}
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 

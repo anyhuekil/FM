@@ -1,4 +1,4 @@
-package jspexp.proj3_java;
+package z02_vo;
 //jspexp.proj3_java.AuctionBidDTO
 import java.util.Date;
 

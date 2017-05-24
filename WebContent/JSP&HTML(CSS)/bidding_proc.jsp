@@ -1,19 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-    import = "z02_vo.AuctionBidDTO"
-    import = "z01_database.AuctionBidDAO" %>
+    import = "z02_vo.*"
+    import = "z01_database.*" %>
 <% request.setCharacterEncoding("UTF-8"); 
 	// 모든 프로세스 처리는 이 페이지에 모을생각.
 
 %>
    
 <%
-AuctionBidDAO db = new AuctionBidDAO();
-AuctionBidDTO bidder = new AuctionBidDTO();
+AuctionItemDAO db = new AuctionItemDAO();
+AuctionItemDTO bidder = new AuctionItemDTO();
 String raisedBid = (request.getParameter("afterR"));
-bidder.setCurrentBid( new Double( raisedBid ) ) ; //###
-bidder.setAuctionID( new Integer(request.getParameter("hiddenBidderId")) );
-db.raisePrice(bidder); //###
+bidder.setCurrentBidAmount( new Double( raisedBid ) ) ; //###
+bidder.setAuctionId( new Integer(request.getParameter("hiddenBidderId")) );
+db.raisePrice(bidder); //### 
 //response.sendRedirect("bidding.jsp");
 response.sendRedirect("auction_main.jsp");
 %>
@@ -34,6 +34,6 @@ $(document).ready(function(){
 </head>
 <body>
 <h1> 입찰완료. </h1>
-<h3><%= bidder.getCurrentBid() %></h3>
+
 </body>
 </html>
