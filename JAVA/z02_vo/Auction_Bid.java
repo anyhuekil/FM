@@ -1,19 +1,19 @@
-package jspexp.z02_vo;
+package z02_vo;
 
 import java.util.Date;
 
 public class Auction_Bid {
 	private int bidderID;
 	private int auctionID;
-	private Date timeStemp;
+	private Date biddingDate;
 	private double bidAmount;
 	
 	public Auction_Bid() {
 	}
-	public Auction_Bid(int bidderID, int auctionID, Date timeStemp, double bidAmount) {
+	public Auction_Bid(int bidderID, int auctionID, Date biddingDate, double bidAmount) {
 		this.bidderID = bidderID;
 		this.auctionID = auctionID;
-		this.timeStemp = timeStemp;
+		this.biddingDate = biddingDate;
 		this.bidAmount = bidAmount;
 	}
 	public int getBidderID() {
@@ -28,11 +28,11 @@ public class Auction_Bid {
 	public void setAuctionID(int auctionID) {
 		this.auctionID = auctionID;
 	}
-	public Date getTimeStemp() {
-		return timeStemp;
+	public Date getBiddingDate() {
+		return biddingDate;
 	}
-	public void setTimeStemp(Date timeStemp) {
-		this.timeStemp = timeStemp;
+	public void setBiddingDate(Date biddingDate) {
+		this.biddingDate = biddingDate;
 	}
 	public double getBidAmount() {
 		return bidAmount;
