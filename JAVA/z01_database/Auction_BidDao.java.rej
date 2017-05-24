@@ -1,0 +1,9 @@
+diff a/JAVA/z01_database/Auction_BidDao.java b/JAVA/z01_database/Auction_BidDao.java	(rejected hunks)
+@@ -17,7 +17,6 @@
+ 		Class.forName("oracle.jdbc.driver.OracleDriver");
+ 		String conInfo="jdbc:oracle:thin:@192.168.0.110:1522:orcl";
+ 		con = DriverManager.getConnection(conInfo,"cto","qqqq");
+-		System.out.println("connection complete");
+ 		System.out.println("접속문제");
+ 	}
+ 	
